@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Seamtile Download</title><meta name="description" content="Download Seamtile, a free Mac app that makes seamless repeating textures from photos">
+<link rel="icon" href="../icon.png"><style>:root{--bg:#f6f7f9;--card:#fff;--text:#1d1f23;--muted:#5d636d;--line:#e2e5ea;--accent:#2f7de1;--accent-text:#fff;--code:#eef1f5}
+@media (prefers-color-scheme:dark){:root{--bg:#16181c;--card:#1f2228;--text:#e8eaee;--muted:#a0a6b0;--line:#30343c;--accent:#4c93ee;--accent-text:#fff;--code:#2a2e36}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif}
+main{max-width:680px;margin:0 auto;padding:40px 16px 56px}
+.lang{text-align:right;font-size:14px;margin:0 0 8px}
+a{color:var(--accent)}
+.head{display:flex;gap:18px;align-items:center;margin-bottom:24px}
+.head img{width:88px;height:88px;border-radius:20px;flex:none}
+h1{font-size:30px;margin:0;line-height:1.2}
+.head p{margin:4px 0 0;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px;margin:18px 0}
+.dl{display:inline-block;background:var(--accent);color:var(--accent-text);text-decoration:none;font-weight:600;font-size:17px;padding:12px 26px;border-radius:10px}
+.dl:hover{filter:brightness(1.08)}
+.meta{color:var(--muted);font-size:14px;margin:10px 0 0}
+h2{font-size:19px;margin:0 0 8px}
+ol,ul{padding-left:1.3em;margin:6px 0}
+pre{background:var(--code);border-radius:8px;padding:12px 14px;overflow-x:auto;font-size:13.5px;line-height:1.5;margin:10px 0}
+code{font-family:ui-monospace,Menlo,monospace}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+footer{color:var(--muted);font-size:14px;margin-top:28px}</style></head>
+<body><main>
+<p class="lang"><a href="../" lang="ja">日本語</a></p>
+<div class="head"><img src="../icon.png" alt="Seamtile icon"><div><h1>Seamtile</h1><p>A free Mac app that makes seamless repeating textures from photos</p></div></div>
+
+<div class="card">
+<a class="dl" href="https://github.com/satoo3/Seamtile-releases/releases/latest/download/Seamtile-mac.zip">Download for Mac</a>
+<p class="meta" id="ver" data-fmt="Latest version %v · zip %s MB">Latest version · zip</p>
+<p class="meta">macOS 11 Big Sur or later · Mac with Apple silicon · Notarized by Apple</p>
+</div>
+
+<div class="card">
+<h2>Install</h2>
+<ol>
+<li>Open the downloaded zip.</li>
+<li>Move Seamtile.app to your Applications folder.</li>
+<li>Open Seamtile. The AI model (about 238 MB) is downloaded once on first use.</li>
+</ol>
+</div>
+
+<div class="card">
+<h2>Use from the command line</h2>
+<p>This version also supports batch processing from the command line.<br>Run this in Terminal to make the <code>seamtile</code> command available:</p>
+<pre><code>mkdir -p ~/.local/bin &amp;&amp; ln -sf /Applications/Seamtile.app/Contents/MacOS/Seamtile ~/.local/bin/seamtile
+seamtile --help
+seamtile --cli -d out photos/*.jpg</code></pre>
+</div>
+
+<div class="card">
+<h2>Differences from the App Store version</h2>
+<table>
+<tr><th></th><th>This version</th><th>App Store version</th></tr>
+<tr><th>App features</th><td>All</td><td>All</td></tr>
+<tr><th>Command line</th><td>Yes</td><td>No (App Store rules)</td></tr>
+<tr><th>Updates</th><td>Download again from this page</td><td>Automatic via the App Store</td></tr>
+</table>
+</div>
+
+<footer>
+<p><a href="https://www.ultrawarp.jp/seamtile/en/">Website</a> · <a href="https://www.ultrawarp.jp/seamtile/en/privacy/">Privacy policy</a> · <a href="https://github.com/satoo3/Seamtile-releases/releases">All versions</a><br>Contact: <a href="mailto:support@ultrawarp.jp">support@ultrawarp.jp</a></p>
+<p>© 2026 Ultrawarp</p>
+</footer>
+</main><script>
+fetch('https://api.github.com/repos/satoo3/Seamtile-releases/releases/latest').then(r=>r.ok?r.json():null).then(j=>{
+  if(!j)return;const a=(j.assets||[]).find(x=>x.name==='Seamtile-mac.zip');
+  const v=document.getElementById('ver');v.textContent=v.dataset.fmt.replace('%v',j.tag_name.replace(/^v/,'')).replace('%s',a?(a.size/1048576).toFixed(1):'?');
+}).catch(()=>{});
+</script></body></html>

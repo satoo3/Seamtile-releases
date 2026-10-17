@@ -7,6 +7,8 @@ Seamtile makes seamless repeating textures, normal maps and height maps from pho
 
 ## ダウンロード / Download
 
+**ダウンロードページ / Download page: https://satoo3.github.io/Seamtile-releases/**
+
 [最新のリリース / Latest release](https://github.com/satoo3/Seamtile-releases/releases/latest) から `Seamtile-<version>-mac.zip` をダウンロードし、
 出てきた Seamtile.app を「アプリケーション」フォルダに入れてください。
 
@@ -37,5 +39,5 @@ seamtile --cli -d out photos/*.jpg
 
 support@ultrawarp.jp
 
-このリポジトリは配布専用です（ソースコードは含みません）。
+このリポジトリは配布専用です（ソースコードは含みません）。ダウンロードページはこのリポジトリの index.html から GitHub Pages で作っています。
 This repository is for distribution only and does not contain source code.
